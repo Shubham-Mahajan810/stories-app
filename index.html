@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Stories Demo (Mobile)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="note">Instagram</div>
+     
+
+
+  <!-- Horizontal scrollable story list -->
+  <div class="story-list" id="storyList" aria-label="stories"></div>
+
+  <!-- Full screen story viewer -->
+  <div class="story-viewer hidden" id="storyViewer" role="dialog" aria-modal="true">
+    <div class="topbar">
+      <button id="closeBtn" aria-label="close stories">✕</button>
+      <div class="progress-container" id="progressContainer" aria-hidden="true"></div>
+    </div>
+
+    <div class="viewer-body">
+      <div class="loader hidden" id="loader">Loading…</div>
+      <img id="storyImage" class="story-image" src="" alt="story image" />
+      <div class="story-nav left" id="prevStory" aria-label="previous story"></div>
+      <div class="story-nav right" id="nextStory" aria-label="next story"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
