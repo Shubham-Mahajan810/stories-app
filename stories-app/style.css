@@ -1,0 +1,45 @@
+:root{--bg:#000;--muted:#111;--accent:#fff}
+html,body{
+     height:100%;
+     margin:0;
+     background:white;
+     color:var(--accent);
+     font-family:Inter,system-ui,Roboto,Arial
+}
+.note
+{    padding:8px 12px;
+     background:white;
+     color:black;
+     text-align:start;
+     font-size:17px;
+     font-style:oblique;
+     
+}
+.story-list{display:flex;overflow-x:auto;padding:12px;background:var(--muted);gap:10px}
+.story-list::-webkit-scrollbar{display:none}
+.story-list img{width:72px;height:72px;border-radius:50%;border:3px solid #ff3b6b;object-fit:cover;flex-shrink:0;cursor:pointer}
+
+.story-viewer{position:fixed;inset:0;display:flex;flex-direction:column;align-items:stretch;background:#000;z-index:50}
+.hidden{display:none}
+.topbar{display:flex;align-items:center;gap:8px;padding:8px;position:relative;z-index:60}
+.topbar > button{margin-left:auto;background:transparent;border:none;color:#fff;font-size:20px;padding:6px 10px;cursor:pointer}
+.progress-container{position:absolute;left:12px;right:56px;top:10px;display:flex;gap:6px;pointer-events:none}
+.progress-bar{flex:1;height:3px;background:rgba(255,255,255,0.2);overflow:hidden;border-radius:2px}
+.progress-bar-fill{height:100%;width:0%;background:#fff;transition:none}
+
+.viewer-body{position:relative;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.story-image{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1);transition:opacity .25s ease}
+.loader{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.6);padding:8px 12px;border-radius:6px;font-size:14px}
+
+.story-nav{position:absolute;top:0;height:100%;width:50%;z-index:70}
+.story-nav.left{left:0}
+.story-nav.right{right:0}
+.story-nav{cursor:pointer}
+@media(min-width:700px){
+  .note{display:block}
+  .story-list{max-width:600px;margin:0 auto}
+  /* Optionally hide viewer on large screens (but still works) */
+}
+
+.bottom-bar{ text-align:right;border-top:1px solid rgba(255,255,255,0.1)}
+.action-btn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer}

@@ -1,0 +1,9 @@
+{
+  "stories": [
+    { "id": 1, "image": "https://picsum.photos/id/1015/800/1400" },
+    { "id": 2, "image": "https://picsum.photos/id/1016/800/1400" },
+    { "id": 3, "image": "https://picsum.photos/id/1018/800/1400" },
+    { "id": 4, "image": "https://picsum.photos/id/1021/800/1400" },
+    { "id": 5, "image": "https://picsum.photos/id/1025/800/1400" }
+  ]
+}
